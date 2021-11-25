@@ -1,0 +1,6 @@
+pybit
+pandas
+numpy
+pandas_ta
+plotly
+python-telegram-bot
