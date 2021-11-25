@@ -47,7 +47,7 @@ def supertrend(df, period=5, atr_multiplier=2):
     return df.iloc[period:,:].reset_index(drop=True)
 
 def create_telegram_bot():
-    with open('/home/kystab33/tradingbot/notistar_bot.json', mode="r") as f:
+    with open('~/str_pipe1/main/notistar_bot.json', mode="r") as f:
         notistar_json = json.load(f)
     bot = telgr.Bot(token=notistar_json["bot_token"])
     return bot, notistar_json["chat_id"]
@@ -67,8 +67,6 @@ def send_message_telegram(bot, chat_id, df, open_time):
         Open_position : {"Long" if df.iloc[-2,:]["SUPER_direction"]==-1 else "Short"}
         Stop_loss : 0
         """
-        # my_photo_path = ""
-        # bot.send_photo(chat_id=chat_id, photo=open(my_photo_path, 'rb'))
     except:
         my_text = "Error"
     finally:

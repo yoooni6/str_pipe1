@@ -1,1 +1,1 @@
-nohup python3 -u /home/kystab33/tradingbot/tradingbot_supertrend_telegram.py > nohup_211104.log &
+nohup python3 -u ~/str_pipe1/main/str_pipe1.py > nohup.log &
